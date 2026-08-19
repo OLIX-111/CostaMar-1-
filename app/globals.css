@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply text-gray-900 bg-white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+}
+
+@layer utilities {
+  .text-teal-custom {
+    color: #2bb5b0;
+  }
+  .bg-teal-custom {
+    background-color: #2bb5b0;
+  }
+  .border-teal-custom {
+    border-color: #2bb5b0;
+  }
+}
