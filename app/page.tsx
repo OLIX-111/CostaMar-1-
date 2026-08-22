@@ -264,33 +264,29 @@ function Bienvenidos() {
 ────────────────────────────────────────────────────────────────────────────── */
 function AccesoPrivilegiado() {
   return (
-    <section className="py-16 md:py-20 lg:py-30 bg-white">
-      <div className="mx-auto px-6 sm:px-10 md:px-16 lg:px-24">
-        <div className="flex flex-col lg:flex-row items-stretch gap-12 min-h-[500px]">
-          <div className="flex-1">
-            <div className="relative h-full min-h-[400px] lg:min-h-full">
-              <Image
-                src={`${BASE}/costamar/accesocostamar.avif`}
-                alt="Tropical resort with directional signs showing various destinations in La Romana"
-                fill
-                className="w-full h-full object-cover rounded-lg shadow-lg"
-              />
-            </div>
-          </div>
-          <div className="flex-1 flex h-full flex-col justify-center">
-            <h2 className="text-3xl lg:text-4xl font-medium text-gray-900 mb-6 leading-tight">
-              Acceso Privilegiado a lo Mejor de La Romana
-            </h2>
-            <p className="text-gray-600 text-lg leading-relaxed">
-              Vivir en Costa Mar significa estar estratégicamente ubicado cerca de las mejores
-              experiencias que ofrece la región. A tan solo{" "}
-              <strong>15 minutos del Aeropuerto Internacional de La Romana</strong>, con acceso
-              inmediato a <strong>Casa de Campo, Altos de Chavón y Bayahibe</strong>, los residentes
-              pueden disfrutar de una amplia oferta de actividades recreativas, culturales y
-              gastronómicas. Desde exclusivos campos de golf y marinas privadas hasta restaurantes de
-              primer nivel y una vibrante vida nocturna, este destino tiene algo para todos.
-            </p>
-          </div>
+    <section className="bg-white overflow-hidden">
+      <div className="flex flex-col lg:flex-row items-stretch min-h-[560px]">
+        <div className="relative w-full lg:w-1/2 min-h-[420px] lg:min-h-full">
+          <Image
+            src={`${BASE}/costamar/accesocostamar.avif`}
+            alt="Tropical resort with directional signs showing various destinations in La Romana"
+            fill
+            className="object-cover object-center"
+          />
+        </div>
+        <div className="w-full lg:w-1/2 flex flex-col justify-center py-12 md:py-16 px-6 sm:px-10 md:px-12 lg:px-16">
+          <h2 className="text-3xl lg:text-4xl font-medium text-gray-900 mb-6 leading-tight">
+            Acceso Privilegiado a lo Mejor de La Romana
+          </h2>
+          <p className="text-gray-600 text-lg leading-relaxed">
+            Vivir en Costa Mar significa estar estratégicamente ubicado cerca de las mejores
+            experiencias que ofrece la región. A tan solo{" "}
+            <strong>15 minutos del Aeropuerto Internacional de La Romana</strong>, con acceso
+            inmediato a <strong>Casa de Campo, Altos de Chavón y Bayahibe</strong>, los residentes
+            pueden disfrutar de una amplia oferta de actividades recreativas, culturales y
+            gastronómicas. Desde exclusivos campos de golf y marinas privadas hasta restaurantes de
+            primer nivel y una vibrante vida nocturna, este destino tiene algo para todos.
+          </p>
         </div>
       </div>
     </section>
@@ -308,32 +304,28 @@ function AccesoPrivilegiado() {
 ────────────────────────────────────────────────────────────────────────────── */
 function EstiloDeVida() {
   return (
-    <section className="py-16 md:py-20 lg:py-30">
-      <div className="mx-auto px-6 sm:px-10 md:px-16 lg:px-24">
-        <div className="flex flex-col lg:flex-row items-stretch min-h-[500px]">
-          <div className="flex-1 flex flex-col justify-center pr-0 lg:pr-16 mb-8 lg:mb-0">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-medium text-gray-900 mb-6 leading-tight">
-              Un Estilo de Vida<br />Frente al Mar
-            </h2>
-            <p className="text-gray-600 text-lg leading-relaxed">
-              Más que una ubicación, Costa Mar es un estilo de vida donde el lujo y la tranquilidad
-              convergen en un solo lugar. Con opciones para disfrutar de deportes acuáticos como
-              snorkel, paddleboarding y navegación, así como espacios diseñados para el bienestar y la
-              relajación, este enclave ofrece el escenario perfecto para quienes buscan calidad de vida
-              sin renunciar a la exclusividad. Aquí, cada amanecer junto al mar es un recordatorio de
-              que vivir en Costa Mar es un privilegio hecho realidad.
-            </p>
-          </div>
-          <div className="flex-1">
-            <div className="relative h-64 lg:h-full min-h-[400px] lg:min-h-[500px] shadow-lg rounded-lg overflow-hidden">
-              <Image
-                src={`${BASE}/costamar/estilocostamar.avif`}
-                alt="Vista del mar con muelle y faro en Costa Mar"
-                fill
-                className="object-cover"
-              />
-            </div>
-          </div>
+    <section className="overflow-hidden">
+      <div className="flex flex-col lg:flex-row items-stretch min-h-[560px]">
+        <div className="w-full lg:w-1/2 flex flex-col justify-center py-12 md:py-16 px-6 sm:px-10 md:px-12 lg:px-16">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-medium text-gray-900 mb-6 leading-tight">
+            Un Estilo de Vida<br />Frente al Mar
+          </h2>
+          <p className="text-gray-600 text-lg leading-relaxed">
+            Más que una ubicación, Costa Mar es un estilo de vida donde el lujo y la tranquilidad
+            convergen en un solo lugar. Con opciones para disfrutar de deportes acuáticos como
+            snorkel, paddleboarding y navegación, así como espacios diseñados para el bienestar y la
+            relajación, este enclave ofrece el escenario perfecto para quienes buscan calidad de vida
+            sin renunciar a la exclusividad. Aquí, cada amanecer junto al mar es un recordatorio de
+            que vivir en Costa Mar es un privilegio hecho realidad.
+          </p>
+        </div>
+        <div className="relative w-full lg:w-1/2 min-h-[420px] lg:min-h-full">
+          <Image
+            src={`${BASE}/costamar/estilocostamar.avif`}
+            alt="Vista del mar con muelle y faro en Costa Mar"
+            fill
+            className="object-cover object-center"
+          />
         </div>
       </div>
     </section>
@@ -361,11 +353,12 @@ interface PropertyCardProps {
   baths: number;
   area: number;
   location: string;
+  className?: string;
 }
 
-function PropertyCard({ image, name, beds, baths, area, location }: PropertyCardProps) {
+function PropertyCard({ image, name, beds, baths, area, location, className = "" }: PropertyCardProps) {
   return (
-    <div className="bg-white rounded-xl p-4 shadow-lg overflow-hidden border border-gray-100 hover:shadow-xl transition-shadow duration-300">
+    <div className={`bg-white rounded-xl p-4 shadow-lg overflow-hidden border border-gray-100 hover:shadow-xl transition-shadow duration-300 ${className}`}>
       <div className="relative">
         <Image src={image} alt={name} width={420} height={256} className="w-full rounded-xl h-64 object-cover" />
         <div className="absolute top-4 right-4">
@@ -413,13 +406,15 @@ function Properties() {
           <div className="inline-block bg-[#d2eff2] px-4 py-2 rounded-full text-sm font-medium mb-6">
             Propiedades
           </div>
-          <h2 className="text-4xl md:text-5xl text-gray-900 leading-tight max-w-4xl mx-auto" style={{ fontStretch: "110%" }}>
+          <h2 className="text-4xl md:text-5xl text-gray-900 leading-tight max-w-4xl mx-auto text-center" style={{ fontStretch: "110%" }}>
             Explora las Opciones de Propiedades Exclusivos<br />
             Diseñadas para Cada Estilo de Vida
           </h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {properties.map((p) => <PropertyCard key={p.name} {...p} />)}
+          {properties.map((p, i) => (
+            <PropertyCard key={p.name} {...p} className={i === properties.length - 1 ? "lg:col-start-2" : ""} />
+          ))}
         </div>
       </div>
     </section>
@@ -479,8 +474,8 @@ function Amenidades() {
 ────────────────────────────────────────────────────────────────────────────── */
 function Gallery() {
   return (
-    <section className="min-h-screen bg-[#fafafa] py-16 md:py-20 lg:py-30">
-      <div className="mx-auto px-6 sm:px-10 md:px-16 lg:px-24">
+    <section className="min-h-screen bg-[#fafafa] py-16 md:py-20">
+      <div className="px-4 md:px-6">
         <div className="grid grid-rows-2 gap-4 h-[calc(100vh-4rem)]">
           <div className="relative rounded-2xl shadow-lg overflow-hidden">
             <Image
@@ -542,43 +537,39 @@ const destinos = [
 
 function Servicios() {
   return (
-    <section className="py-16 px-4 bg-gray-50">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <div className="inline-block bg-[#d2eff2] px-4 py-2 rounded-full text-sm font-medium mb-6">
-            Servicios
-          </div>
-          <h2 className="text-4xl md:text-5xl font-medium text-gray-900 mb-6">
-            Conecta con los Mejores Destinos<br />Cercanos
-          </h2>
-          <p className="text-lg font-semibold text-gray-600 max-w-3xl mx-auto">
-            Descubre la conveniencia de vivir en Residencial Costa Mar, con acceso rápido a las
-            principales atracciones y servicios de La Romana.
-          </p>
+    <section className="py-16 bg-gray-50 overflow-hidden">
+      <div className="text-center mb-16 px-6 sm:px-10 md:px-16 lg:px-24">
+        <div className="inline-block bg-[#d2eff2] px-4 py-2 rounded-full text-sm font-medium mb-6">
+          Servicios
         </div>
-        <div className="space-y-16">
-          {destinos.map((d) => (
-            <div
-              key={d.num}
-              className={`flex flex-col ${d.reverse ? "lg:flex-row-reverse" : "lg:flex-row"} items-center gap-8 lg:gap-16`}
-            >
-              <div className="flex-1 text-center lg:text-left">
-                <div className="flex items-center justify-center lg:justify-start gap-4 mb-6">
-                  <div className="w-12 h-12 bg-[#a9e6e8] rounded-xl flex items-center justify-center font-medium text-lg">
-                    {d.num}
-                  </div>
+        <h2 className="text-4xl md:text-5xl font-medium text-gray-900 mb-6">
+          Conecta con los Mejores Destinos<br />Cercanos
+        </h2>
+        <p className="text-lg font-semibold text-gray-600 max-w-3xl mx-auto">
+          Descubre la conveniencia de vivir en Residencial Costa Mar, con acceso rápido a las
+          principales atracciones y servicios de La Romana.
+        </p>
+      </div>
+      <div>
+        {destinos.map((d) => (
+          <div
+            key={d.num}
+            className={`flex flex-col ${d.reverse ? "lg:flex-row-reverse" : "lg:flex-row"} items-stretch min-h-[400px] mb-8 lg:mb-0`}
+          >
+            <div className="w-full lg:w-1/2 flex flex-col justify-center text-center lg:text-left py-12 lg:py-16 px-6 sm:px-10 md:px-16 lg:px-20">
+              <div className="flex items-center justify-center lg:justify-start gap-4 mb-6">
+                <div className="w-12 h-12 bg-[#a9e6e8] rounded-xl flex items-center justify-center font-medium text-lg">
+                  {d.num}
                 </div>
-                <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">{d.name}</h3>
-                <p className="text-lg text-gray-600">{d.dist}</p>
               </div>
-              <div className="flex-1">
-                <div className="relative w-full h-80 md:h-96 shadow-lg rounded-2xl overflow-hidden">
-                  <Image src={d.img} alt={d.name} fill className="object-cover" />
-                </div>
-              </div>
+              <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">{d.name}</h3>
+              <p className="text-lg text-gray-600">{d.dist}</p>
             </div>
-          ))}
-        </div>
+            <div className="relative w-full lg:w-1/2 min-h-[320px] md:min-h-[420px] rounded-2xl lg:rounded-none overflow-hidden mx-4 lg:mx-0 shadow-lg lg:shadow-none">
+              <Image src={d.img} alt={d.name} fill className="object-cover" />
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   );
@@ -609,68 +600,64 @@ function Contacto() {
   const inputClass = "w-full px-4 py-3 bg-white border border-gray-300 rounded-xl focus:ring-2 focus:ring-teal-500 focus:border-transparent outline-none transition-all text-sm sm:text-base";
 
   return (
-    <section id="contact" className="bg-white py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-semibold text-gray-900 mb-8 sm:mb-10 lg:mb-12 leading-tight">
+    <section id="contact" className="bg-white overflow-hidden">
+      <div className="px-6 sm:px-10 md:px-16 lg:px-24 pt-12 sm:pt-16 md:pt-20 pb-8 sm:pb-10">
+        <h2 className="text-3xl md:text-4xl font-semibold text-gray-900 leading-tight">
           Agenda Tu Cita para Conocer Residencial Costa Mar
         </h2>
-        <div className="flex flex-col lg:flex-row items-stretch gap-8 lg:gap-10 min-h-[420px] sm:min-h-[480px] lg:min-h-[600px]">
-          <div className="w-full lg:w-1/2 flex flex-col justify-center">
-            <div className="max-w-2xl">
-              <p className="text-gray-600 mb-6 sm:mb-8 leading-relaxed">
-                Queremos resolver todas tus dudas y ayudarte a encontrar la propiedad perfecta en
-                Residencial Costa Mar. Agenda una cita con nuestro equipo y descubre todo lo que este
-                exclusivo proyecto tiene para ofrecer.
-              </p>
-              <div className="mb-6 sm:mb-8 grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm sm:text-base">
-                <div className="flex flex-col sm:flex-row sm:items-center">
-                  <span className="font-semibold text-gray-900 mr-1">Teléfono:</span>
-                  <span className="text-gray-600">+1 (484) 473-1113</span>
-                </div>
-                <div className="flex flex-col sm:flex-row sm:items-center">
-                  <span className="font-semibold text-gray-900 mr-1">Correo Electrónico:</span>
-                  <span className="text-gray-600">info@lromanarealestate.com</span>
-                </div>
-                <div className="sm:col-span-2">
-                  <span className="font-semibold text-gray-900">Dirección:</span>
-                  <span className="text-gray-600 ml-1">Reparto Torres Calle 4ta #5, La Romana, República Dominicana.</span>
-                </div>
+      </div>
+      <div className="flex flex-col lg:flex-row items-stretch min-h-[500px] lg:min-h-[640px]">
+        <div className="w-full lg:w-1/2 flex flex-col justify-center px-6 sm:px-10 md:px-16 lg:px-24 pb-12 lg:pb-20">
+          <p className="text-gray-600 mb-6 sm:mb-8 leading-relaxed">
+            Queremos resolver todas tus dudas y ayudarte a encontrar la propiedad perfecta en
+            Residencial Costa Mar. Agenda una cita con nuestro equipo y descubre todo lo que este
+            exclusivo proyecto tiene para ofrecer.
+          </p>
+          <div className="mb-6 sm:mb-8 grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm sm:text-base">
+            <div className="flex flex-col sm:flex-row sm:items-center">
+              <span className="font-semibold text-gray-900 mr-1">Teléfono:</span>
+              <span className="text-gray-600">+1 (484) 473-1113</span>
+            </div>
+            <div className="flex flex-col sm:flex-row sm:items-center">
+              <span className="font-semibold text-gray-900 mr-1">Correo Electrónico:</span>
+              <span className="text-gray-600">info@lromanarealestate.com</span>
+            </div>
+            <div className="sm:col-span-2">
+              <span className="font-semibold text-gray-900">Dirección:</span>
+              <span className="text-gray-600 ml-1">Reparto Torres Calle 4ta #5, La Romana, República Dominicana.</span>
+            </div>
+          </div>
+          <form onSubmit={(e) => e.preventDefault()} className="bg-gray-50 p-5 sm:p-6 md:p-8 rounded-xl shadow-sm">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">Nombre y Apellido</label>
+                <input name="name" type="text" value={form.name} onChange={handleChange} placeholder="Mitchell" className={inputClass} />
               </div>
-              <form onSubmit={(e) => e.preventDefault()} className="bg-gray-50 p-5 sm:p-6 md:p-8 rounded-xl shadow-sm">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">Nombre y Apellido</label>
-                    <input name="name" type="text" value={form.name} onChange={handleChange} placeholder="Mitchell" className={inputClass} />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">Teléfono</label>
-                    <input name="phone" type="tel" value={form.phone} onChange={handleChange} placeholder="+123 456 789 00" className={inputClass} />
-                  </div>
-                </div>
-                <div className="mb-4">
-                  <label className="block text-sm font-medium text-gray-700 mb-1">Correo Electrónico</label>
-                  <input name="email" type="email" value={form.email} onChange={handleChange} placeholder="test@gmail.com" className={inputClass} />
-                </div>
-                <div className="mb-4">
-                  <label className="block text-sm font-medium text-gray-700 mb-1">Mensaje</label>
-                  <textarea name="message" value={form.message} onChange={handleChange} placeholder="Explain it in details..." rows={5} className={inputClass + " resize-none"} />
-                </div>
-                <button type="submit" className="w-full bg-[#45c7cd] text-white font-semibold py-3 sm:py-4 px-6 rounded-full transition-colors duration-200 hover:bg-teal-600">
-                  Enviar mi mensaje
-                </button>
-              </form>
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">Teléfono</label>
+                <input name="phone" type="tel" value={form.phone} onChange={handleChange} placeholder="+123 456 789 00" className={inputClass} />
+              </div>
             </div>
-          </div>
-          <div className="w-full lg:w-1/2">
-            <div className="relative w-full h-56 sm:h-72 md:h-96 lg:h-full lg:min-h-[500px] shadow-lg rounded-xl overflow-hidden">
-              <Image
-                src={`${BASE}/costamar/formulariocostamar.avif`}
-                alt="Residencial Costa Mar - Modern apartment buildings with tropical landscaping"
-                fill
-                className="absolute inset-0 w-full h-full object-cover"
-              />
+            <div className="mb-4">
+              <label className="block text-sm font-medium text-gray-700 mb-1">Correo Electrónico</label>
+              <input name="email" type="email" value={form.email} onChange={handleChange} placeholder="test@gmail.com" className={inputClass} />
             </div>
-          </div>
+            <div className="mb-4">
+              <label className="block text-sm font-medium text-gray-700 mb-1">Mensaje</label>
+              <textarea name="message" value={form.message} onChange={handleChange} placeholder="Explain it in details..." rows={5} className={inputClass + " resize-none"} />
+            </div>
+            <button type="submit" className="w-full bg-[#45c7cd] text-white font-semibold py-3 sm:py-4 px-6 rounded-full transition-colors duration-200 hover:bg-teal-600">
+              Enviar mi mensaje
+            </button>
+          </form>
+        </div>
+        <div className="relative w-full lg:w-1/2 min-h-[380px] lg:min-h-full">
+          <Image
+            src={`${BASE}/costamar/formulariocostamar.avif`}
+            alt="Residencial Costa Mar - Modern apartment buildings with tropical landscaping"
+            fill
+            className="object-cover object-center"
+          />
         </div>
       </div>
     </section>

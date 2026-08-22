@@ -11,9 +11,7 @@
   <style>
     *,*::before,*::after{box-sizing:border-box}
     html{scroll-behavior:smooth}
-    body{color:#111827;background:#fff;font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}
-    .cover{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-    .rel{position:relative;overflow:hidden}
+    body{color:#111827;background:#fff;font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;overflow-x:hidden}
   </style>
 </head>
 <body>
@@ -22,12 +20,15 @@
 <header class="w-full fixed top-0 z-50 border-b bg-white/90 backdrop-blur-sm">
   <div class="mx-auto px-6 sm:px-10 md:px-16 lg:px-24">
     <div class="flex items-center justify-between py-6">
-      <a href="/">
-        <img src="https://lromanarealestate.com/lromana-logo.png" alt="L'Romana Real Estate" style="height:56px;width:auto;object-fit:contain;" />
+      <a href="/" class="text-lg sm:text-xl font-semibold tracking-wide">
+        <div style="position:relative;height:7rem;width:360px">
+          <img src="https://lromanarealestate.com/lromana-logo.png" alt="L'Romana Real Estate"
+               style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain" />
+        </div>
       </a>
       <nav class="hidden md:flex items-center gap-8 text-base">
-        <button class="inline-flex items-center gap-1 text-gray-700 hover:text-gray-900 transition-colors duration-300 focus:outline-none">
-          Proyectos <i data-lucide="chevron-down" class="w-3.5 h-3.5"></i>
+        <button class="inline-flex items-center gap-1 text-gray-700 hover:text-gray-900 focus:outline-none transition-colors duration-300">
+          Proyectos <i data-lucide="chevron-down" style="width:14px;height:14px"></i>
         </button>
         <a href="https://propiedades.lromanarealestate.com/" class="text-gray-700 hover:text-gray-900 transition-colors duration-300">Propiedades</a>
         <a href="/agentes" class="text-gray-700 hover:text-gray-900 transition-colors duration-300">Agentes</a>
@@ -35,16 +36,18 @@
         <a href="https://propiedades.lromanarealestate.com/contactos" class="text-gray-700 hover:text-gray-900 transition-colors duration-300">Contacto</a>
       </nav>
       <div class="flex items-center gap-3">
-        <a href="https://propiedades.lromanarealestate.com/" class="hidden md:inline-block rounded-full bg-[#1e63b5] px-6 py-4 text-sm font-medium text-white hover:bg-blue-700 transition-colors">
+        <a href="https://propiedades.lromanarealestate.com/"
+           class="hidden md:inline-block rounded-full bg-[#1e63b5] px-6 py-4 text-sm font-medium text-white hover:bg-blue-700 transition-colors">
           Empezar Búsqueda
         </a>
         <button id="menu-btn" class="md:hidden text-gray-700" aria-label="Abrir menú">
-          <i data-lucide="menu" class="w-6 h-6"></i>
+          <i data-lucide="menu" style="width:22px;height:22px"></i>
         </button>
       </div>
     </div>
   </div>
-  <div id="mobile-menu" style="display:none" class="md:hidden bg-white border-t px-6 py-4 flex flex-col gap-4 text-sm font-medium text-gray-700">
+  <div id="mobile-menu" style="display:none"
+       class="md:hidden bg-white border-t px-6 py-4 flex-col gap-4 text-sm font-medium text-gray-700">
     <button class="text-left">Proyectos</button>
     <a href="https://propiedades.lromanarealestate.com/">Propiedades</a>
     <a href="/agentes">Agentes</a>
@@ -57,7 +60,7 @@
 
   <!-- HERO -->
   <section class="bg-gray-50 flex flex-col items-center justify-center px-4 py-16">
-    <div class="mb-16 w-full">
+    <div class="mb-16">
       <div class="flex items-center gap-2 justify-center mb-6">
         <div class="w-3 h-3 bg-[#45c7cd] rounded-full"></div>
         <span class="text-gray-800 font-medium text-lg">Costamar</span>
@@ -67,10 +70,12 @@
           ¡Descubre el hogar perfecto en<br />Residencial Costa Mar!
         </h1>
         <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <a href="#modelos" class="bg-[#45c7cd] text-white font-semibold px-8 py-4 rounded-full hover:bg-teal-500 transition-colors text-sm">
+          <a href="/costamar#modelos"
+             class="bg-[#45c7cd] text-white font-semibold px-8 py-4 rounded-full hover:bg-teal-500 transition-colors text-sm">
             Explorar Modelos
           </a>
-          <a href="#contact" class="border border-gray-400 text-gray-700 font-medium px-8 py-4 rounded-full hover:border-gray-700 bg-white transition-colors text-sm">
+          <a href="/costamar#contact"
+             class="border border-gray-400 text-gray-700 font-medium px-8 py-4 rounded-full hover:border-gray-700 bg-white transition-colors text-sm">
             Solicitar Más Información
           </a>
         </div>
@@ -79,7 +84,8 @@
   </section>
 
   <!-- VIDEO 1 -->
-  <video autoplay loop muted playsinline style="width:100%;height:500px;object-fit:cover;display:block">
+  <video autoplay loop muted playsinline
+         class="relative inset-0 w-full h-full object-cover" style="height:500px;display:block">
     <source src="https://lromanarealestate.com/costamar.mp4" type="video/mp4" />
   </video>
 
@@ -88,18 +94,20 @@
     <div class="max-w-4xl mx-auto text-center">
       <div class="flex items-center justify-center flex-wrap gap-2 mb-4">
         <span class="text-4xl md:text-5xl font-light text-gray-800">Un</span>
-        <div class="w-16 h-16 md:w-24 md:h-20 rounded-full overflow-hidden shadow-lg flex-shrink-0">
-          <img src="https://lromanarealestate.com/costamar/pastillacostamar1.avif" alt="" class="w-full h-full object-cover" />
+        <div class="relative w-16 h-16 md:w-30 md:h-20 rounded-full overflow-hidden shadow-lg flex-shrink-0">
+          <img src="https://lromanarealestate.com/costamar/pastillacostamar1.avif" alt="Hotel exterior"
+               style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" />
         </div>
         <span class="text-4xl md:text-5xl font-light text-gray-800">oasis de lujo y comodidad</span>
       </div>
       <div class="flex items-center justify-center flex-wrap gap-2">
-        <div class="w-12 h-12 md:w-14 md:h-14 bg-[#45c7cd] rounded-full flex items-center justify-center flex-shrink-0 text-white">
-          <i data-lucide="home" class="w-5 h-5"></i>
+        <div class="w-12 h-12 md:w-14 md:h-14 bg-[#45c7cd] rounded-full flex items-center justify-center flex-shrink-0">
+          <i data-lucide="home" style="width:20px;height:20px" class="text-white"></i>
         </div>
         <span class="text-4xl md:text-5xl font-light text-gray-800">En el corazón</span>
-        <div class="w-16 h-16 md:w-24 md:h-20 rounded-full overflow-hidden shadow-lg flex-shrink-0">
-          <img src="https://lromanarealestate.com/costamar/pastillacostamar2.avif" alt="" class="w-full h-full object-cover" />
+        <div class="relative w-16 h-16 md:w-30 md:h-20 rounded-full overflow-hidden shadow-lg flex-shrink-0">
+          <img src="https://lromanarealestate.com/costamar/pastillacostamar2.avif" alt="Hotel interior"
+               style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" />
         </div>
         <span class="text-4xl md:text-5xl font-light text-gray-800">de la romana</span>
       </div>
@@ -145,12 +153,13 @@
             jardines tropicales y seguridad 24/7, además de una ubicación estratégica cerca de las
             mejores playas, campos de golf y atracciones culturales de la región.
           </p>
-          <p class="text-gray-600 text-lg leading-relaxed">
+          <p class="text-gray-600 text-lg leading-relaxed mb-8">
             Residencial Costa Mar no es solo un lugar para vivir, es un espacio donde la comodidad
             y la sofisticación se convierten en parte de tu día a día.
           </p>
           <div class="pt-4">
-            <a href="#modelos" class="inline-block bg-[#45c7cd] text-white font-semibold px-8 py-4 rounded-full hover:bg-teal-500 transition-colors text-sm">
+            <a href="/costamar#modelos"
+               class="inline-block bg-[#45c7cd] text-white font-semibold px-8 py-4 rounded-full hover:bg-teal-500 transition-colors text-sm">
               Saber Más
             </a>
           </div>
@@ -160,56 +169,57 @@
   </section>
 
   <!-- ACCESO PRIVILEGIADO -->
-  <section class="py-16 md:py-20 lg:py-30 bg-white">
-    <div class="mx-auto px-6 sm:px-10 md:px-16 lg:px-24">
-      <div class="flex flex-col lg:flex-row items-stretch gap-12" style="min-height:500px">
-        <div class="flex-1 rel rounded-lg shadow-lg" style="min-height:400px">
-          <img class="cover rounded-lg" src="https://lromanarealestate.com/costamar/accesocostamar.avif" alt="Acceso privilegiado Costa Mar" />
-        </div>
-        <div class="flex-1 flex flex-col justify-center">
-          <h2 class="text-3xl lg:text-4xl font-medium text-gray-900 mb-6 leading-tight">
-            Acceso Privilegiado a lo Mejor de La Romana
-          </h2>
-          <p class="text-gray-600 text-lg leading-relaxed">
-            Vivir en Costa Mar significa estar estratégicamente ubicado cerca de las mejores
-            experiencias que ofrece la región. A tan solo
-            <strong>15 minutos del Aeropuerto Internacional de La Romana</strong>, con acceso
-            inmediato a <strong>Casa de Campo, Altos de Chavón y Bayahibe</strong>, los residentes
-            pueden disfrutar de una amplia oferta de actividades recreativas, culturales y
-            gastronómicas. Desde exclusivos campos de golf y marinas privadas hasta restaurantes de
-            primer nivel y una vibrante vida nocturna, este destino tiene algo para todos.
-          </p>
-        </div>
+  <section class="bg-white overflow-hidden">
+    <div class="flex flex-col lg:flex-row items-stretch min-h-[560px]">
+      <div class="relative w-full lg:w-1/2 min-h-[420px] lg:min-h-full">
+        <img src="https://lromanarealestate.com/costamar/accesocostamar.avif"
+             alt="Tropical resort with directional signs showing various destinations in La Romana"
+             style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center" />
+      </div>
+      <div class="w-full lg:w-1/2 flex flex-col justify-center py-12 md:py-16 px-6 sm:px-10 md:px-12 lg:px-16">
+        <h2 class="text-3xl lg:text-4xl font-medium text-gray-900 mb-6 leading-tight">
+          Acceso Privilegiado a lo Mejor de La Romana
+        </h2>
+        <p class="text-gray-600 text-lg leading-relaxed">
+          Vivir en Costa Mar significa estar estratégicamente ubicado cerca de las mejores
+          experiencias que ofrece la región. A tan solo
+          <strong>15 minutos del Aeropuerto Internacional de La Romana</strong>, con acceso
+          inmediato a <strong>Casa de Campo, Altos de Chavón y Bayahibe</strong>, los residentes
+          pueden disfrutar de una amplia oferta de actividades recreativas, culturales y
+          gastronómicas. Desde exclusivos campos de golf y marinas privadas hasta restaurantes de
+          primer nivel y una vibrante vida nocturna, este destino tiene algo para todos.
+        </p>
       </div>
     </div>
   </section>
 
   <!-- ESTILO DE VIDA -->
-  <section class="py-16 md:py-20 lg:py-30">
-    <div class="mx-auto px-6 sm:px-10 md:px-16 lg:px-24">
-      <div class="flex flex-col lg:flex-row items-stretch gap-12" style="min-height:500px">
-        <div class="flex-1 flex flex-col justify-center pr-0 lg:pr-16 mb-8 lg:mb-0">
-          <h2 class="text-3xl md:text-4xl lg:text-5xl font-medium text-gray-900 mb-6 leading-tight">
-            Un Estilo de Vida<br />Frente al Mar
-          </h2>
-          <p class="text-gray-600 text-lg leading-relaxed">
-            Más que una ubicación, Costa Mar es un estilo de vida donde el lujo y la tranquilidad
-            convergen en un solo lugar. Con opciones para disfrutar de deportes acuáticos como
-            snorkel, paddleboarding y navegación, así como espacios diseñados para el bienestar y la
-            relajación, este enclave ofrece el escenario perfecto para quienes buscan calidad de vida
-            sin renunciar a la exclusividad. Aquí, cada amanecer junto al mar es un recordatorio de
-            que vivir en Costa Mar es un privilegio hecho realidad.
-          </p>
-        </div>
-        <div class="flex-1 rel rounded-lg shadow-lg" style="min-height:400px">
-          <img class="cover rounded-lg" src="https://lromanarealestate.com/costamar/estilocostamar.avif" alt="Estilo de vida Costa Mar" />
-        </div>
+  <section class="overflow-hidden">
+    <div class="flex flex-col lg:flex-row items-stretch min-h-[560px]">
+      <div class="w-full lg:w-1/2 flex flex-col justify-center py-12 md:py-16 px-6 sm:px-10 md:px-12 lg:px-16">
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-medium text-gray-900 mb-6 leading-tight">
+          Un Estilo de Vida<br />Frente al Mar
+        </h2>
+        <p class="text-gray-600 text-lg leading-relaxed">
+          Más que una ubicación, Costa Mar es un estilo de vida donde el lujo y la tranquilidad
+          convergen en un solo lugar. Con opciones para disfrutar de deportes acuáticos como
+          snorkel, paddleboarding y navegación, así como espacios diseñados para el bienestar y la
+          relajación, este enclave ofrece el escenario perfecto para quienes buscan calidad de vida
+          sin renunciar a la exclusividad. Aquí, cada amanecer junto al mar es un recordatorio de
+          que vivir en Costa Mar es un privilegio hecho realidad.
+        </p>
+      </div>
+      <div class="relative w-full lg:w-1/2 min-h-[420px] lg:min-h-full">
+        <img src="https://lromanarealestate.com/costamar/estilocostamar.avif"
+             alt="Vista del mar con muelle y faro en Costa Mar"
+             style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center" />
       </div>
     </div>
   </section>
 
   <!-- VIDEO 2 -->
-  <video autoplay loop muted playsinline style="width:100%;height:500px;object-fit:cover;display:block">
+  <video autoplay loop muted playsinline
+         class="relative inset-0 w-full h-full object-cover" style="height:500px;display:block">
     <source src="https://lromanarealestate.com/costamarRender.mp4" type="video/mp4" />
   </video>
 
@@ -218,17 +228,19 @@
     <div class="mx-auto px-6 sm:px-10 md:px-16 lg:px-24">
       <div class="text-center mb-16">
         <div class="inline-block bg-[#d2eff2] px-4 py-2 rounded-full text-sm font-medium mb-6">Propiedades</div>
-        <h2 class="text-4xl md:text-5xl text-gray-900 leading-tight max-w-4xl mx-auto" style="font-stretch:110%">
+        <h2 class="text-4xl md:text-5xl text-gray-900 leading-tight max-w-4xl mx-auto text-center" style="font-stretch:110%">
           Explora las Opciones de Propiedades Exclusivos<br />Diseñadas para Cada Estilo de Vida
         </h2>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-        <!-- Tarjeta 1 -->
-        <div class="bg-white rounded-xl p-4 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300">
-          <div class="rel rounded-xl" style="height:256px">
-            <img class="cover rounded-xl" src="https://lromanarealestate.com/costamar/propiedad1.avif" alt="Costa Mar Apartamento A1.2" />
-            <span class="absolute top-4 right-4 bg-white text-gray-800 text-xs font-semibold px-3 py-1 rounded-full shadow-sm">En venta</span>
+        <div class="bg-white rounded-xl p-4 shadow-lg overflow-hidden border border-gray-100 hover:shadow-xl transition-shadow duration-300">
+          <div class="relative">
+            <img src="https://lromanarealestate.com/costamar/propiedad1.avif" alt="Costa Mar Apartamento A1.2"
+                 class="w-full rounded-xl h-64 object-cover" />
+            <div class="absolute top-4 right-4">
+              <span class="bg-white text-gray-800 text-xs font-semibold px-3 py-1 rounded-full shadow-sm">En venta</span>
+            </div>
           </div>
           <div class="py-6">
             <div class="flex items-center gap-2 mb-2">
@@ -238,19 +250,21 @@
             </div>
             <h3 class="text-xl font-medium text-gray-900 mb-4">Costa Mar Apartamento A1.2</h3>
             <div class="flex items-center gap-4 text-gray-600 text-sm">
-              <span class="flex items-center gap-1"><i data-lucide="home" class="w-3.5 h-3.5"></i> 3</span>
-              <span class="flex items-center gap-1"><i data-lucide="bath" class="w-3.5 h-3.5"></i> 2</span>
-              <span class="flex items-center gap-1"><i data-lucide="maximize-2" class="w-3.5 h-3.5"></i> 134 M²</span>
-              <span class="flex items-center gap-1"><i data-lucide="map-pin" class="w-3.5 h-3.5"></i> La Romana</span>
+              <div class="flex items-center gap-1"><i data-lucide="home" style="width:14px;height:14px"></i><span>3</span></div>
+              <div class="flex items-center gap-1"><i data-lucide="bath" style="width:14px;height:14px"></i><span>2</span></div>
+              <div class="flex items-center gap-1"><i data-lucide="maximize-2" style="width:14px;height:14px"></i><span>134 M²</span></div>
+              <div class="flex items-center gap-1"><i data-lucide="map-pin" style="width:14px;height:14px"></i><span>La Romana</span></div>
             </div>
           </div>
         </div>
 
-        <!-- Tarjeta 2 -->
-        <div class="bg-white rounded-xl p-4 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300">
-          <div class="rel rounded-xl" style="height:256px">
-            <img class="cover rounded-xl" src="https://lromanarealestate.com/costamar/propiedad2.avif" alt="Costa Mar Apartamento Penthouse" />
-            <span class="absolute top-4 right-4 bg-white text-gray-800 text-xs font-semibold px-3 py-1 rounded-full shadow-sm">En venta</span>
+        <div class="bg-white rounded-xl p-4 shadow-lg overflow-hidden border border-gray-100 hover:shadow-xl transition-shadow duration-300">
+          <div class="relative">
+            <img src="https://lromanarealestate.com/costamar/propiedad2.avif" alt="Costa Mar Apartamento Penthouse"
+                 class="w-full rounded-xl h-64 object-cover" />
+            <div class="absolute top-4 right-4">
+              <span class="bg-white text-gray-800 text-xs font-semibold px-3 py-1 rounded-full shadow-sm">En venta</span>
+            </div>
           </div>
           <div class="py-6">
             <div class="flex items-center gap-2 mb-2">
@@ -260,19 +274,21 @@
             </div>
             <h3 class="text-xl font-medium text-gray-900 mb-4">Costa Mar Apartamento Penthouse</h3>
             <div class="flex items-center gap-4 text-gray-600 text-sm">
-              <span class="flex items-center gap-1"><i data-lucide="home" class="w-3.5 h-3.5"></i> 3</span>
-              <span class="flex items-center gap-1"><i data-lucide="bath" class="w-3.5 h-3.5"></i> 3</span>
-              <span class="flex items-center gap-1"><i data-lucide="maximize-2" class="w-3.5 h-3.5"></i> 225 M²</span>
-              <span class="flex items-center gap-1"><i data-lucide="map-pin" class="w-3.5 h-3.5"></i> La Romana</span>
+              <div class="flex items-center gap-1"><i data-lucide="home" style="width:14px;height:14px"></i><span>3</span></div>
+              <div class="flex items-center gap-1"><i data-lucide="bath" style="width:14px;height:14px"></i><span>3</span></div>
+              <div class="flex items-center gap-1"><i data-lucide="maximize-2" style="width:14px;height:14px"></i><span>225 M²</span></div>
+              <div class="flex items-center gap-1"><i data-lucide="map-pin" style="width:14px;height:14px"></i><span>La Romana</span></div>
             </div>
           </div>
         </div>
 
-        <!-- Tarjeta 3 -->
-        <div class="bg-white rounded-xl p-4 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300">
-          <div class="rel rounded-xl" style="height:256px">
-            <img class="cover rounded-xl" src="https://lromanarealestate.com/costamar/propiedad3.avif" alt="Costa Mar Apartamento A2.1" />
-            <span class="absolute top-4 right-4 bg-white text-gray-800 text-xs font-semibold px-3 py-1 rounded-full shadow-sm">En venta</span>
+        <div class="bg-white rounded-xl p-4 shadow-lg overflow-hidden border border-gray-100 hover:shadow-xl transition-shadow duration-300">
+          <div class="relative">
+            <img src="https://lromanarealestate.com/costamar/propiedad3.avif" alt="Costa Mar Apartamento A2.1"
+                 class="w-full rounded-xl h-64 object-cover" />
+            <div class="absolute top-4 right-4">
+              <span class="bg-white text-gray-800 text-xs font-semibold px-3 py-1 rounded-full shadow-sm">En venta</span>
+            </div>
           </div>
           <div class="py-6">
             <div class="flex items-center gap-2 mb-2">
@@ -282,19 +298,21 @@
             </div>
             <h3 class="text-xl font-medium text-gray-900 mb-4">Costa Mar Apartamento A2.1</h3>
             <div class="flex items-center gap-4 text-gray-600 text-sm">
-              <span class="flex items-center gap-1"><i data-lucide="home" class="w-3.5 h-3.5"></i> 3</span>
-              <span class="flex items-center gap-1"><i data-lucide="bath" class="w-3.5 h-3.5"></i> 2</span>
-              <span class="flex items-center gap-1"><i data-lucide="maximize-2" class="w-3.5 h-3.5"></i> 95 M²</span>
-              <span class="flex items-center gap-1"><i data-lucide="map-pin" class="w-3.5 h-3.5"></i> La Romana</span>
+              <div class="flex items-center gap-1"><i data-lucide="home" style="width:14px;height:14px"></i><span>3</span></div>
+              <div class="flex items-center gap-1"><i data-lucide="bath" style="width:14px;height:14px"></i><span>2</span></div>
+              <div class="flex items-center gap-1"><i data-lucide="maximize-2" style="width:14px;height:14px"></i><span>95 M²</span></div>
+              <div class="flex items-center gap-1"><i data-lucide="map-pin" style="width:14px;height:14px"></i><span>La Romana</span></div>
             </div>
           </div>
         </div>
 
-        <!-- Tarjeta 4 -->
-        <div class="bg-white rounded-xl p-4 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300">
-          <div class="rel rounded-xl" style="height:256px">
-            <img class="cover rounded-xl" src="https://lromanarealestate.com/costamar/propiedad3.avif" alt="Costa Mar Apartamento Premium" />
-            <span class="absolute top-4 right-4 bg-white text-gray-800 text-xs font-semibold px-3 py-1 rounded-full shadow-sm">En venta</span>
+        <div class="bg-white rounded-xl p-4 shadow-lg overflow-hidden border border-gray-100 hover:shadow-xl transition-shadow duration-300 lg:col-start-2">
+          <div class="relative">
+            <img src="https://lromanarealestate.com/costamar/propiedad3.avif" alt="Costa Mar Apartamento Premium"
+                 class="w-full rounded-xl h-64 object-cover" />
+            <div class="absolute top-4 right-4">
+              <span class="bg-white text-gray-800 text-xs font-semibold px-3 py-1 rounded-full shadow-sm">En venta</span>
+            </div>
           </div>
           <div class="py-6">
             <div class="flex items-center gap-2 mb-2">
@@ -304,10 +322,10 @@
             </div>
             <h3 class="text-xl font-medium text-gray-900 mb-4">Costa Mar Apartamento Premium</h3>
             <div class="flex items-center gap-4 text-gray-600 text-sm">
-              <span class="flex items-center gap-1"><i data-lucide="home" class="w-3.5 h-3.5"></i> 2</span>
-              <span class="flex items-center gap-1"><i data-lucide="bath" class="w-3.5 h-3.5"></i> 2</span>
-              <span class="flex items-center gap-1"><i data-lucide="maximize-2" class="w-3.5 h-3.5"></i> 110 M²</span>
-              <span class="flex items-center gap-1"><i data-lucide="map-pin" class="w-3.5 h-3.5"></i> La Romana</span>
+              <div class="flex items-center gap-1"><i data-lucide="home" style="width:14px;height:14px"></i><span>2</span></div>
+              <div class="flex items-center gap-1"><i data-lucide="bath" style="width:14px;height:14px"></i><span>2</span></div>
+              <div class="flex items-center gap-1"><i data-lucide="maximize-2" style="width:14px;height:14px"></i><span>110 M²</span></div>
+              <div class="flex items-center gap-1"><i data-lucide="map-pin" style="width:14px;height:14px"></i><span>La Romana</span></div>
             </div>
           </div>
         </div>
@@ -326,32 +344,32 @@
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-16">
         <div class="text-center">
-          <div class="flex justify-center mb-6 text-[#45c7cd]"><i data-lucide="waves" class="w-10 h-10"></i></div>
+          <div class="flex justify-center mb-6 text-[#45c7cd]"><i data-lucide="waves" style="width:40px;height:40px"></i></div>
           <h3 class="text-3xl font-medium text-gray-900 mb-3">Piscina Exclusiva</h3>
           <p class="text-gray-600 font-medium leading-relaxed">Espacios para relajarte y disfrutar.</p>
         </div>
         <div class="text-center">
-          <div class="flex justify-center mb-6 text-[#45c7cd]"><i data-lucide="dumbbell" class="w-10 h-10"></i></div>
+          <div class="flex justify-center mb-6 text-[#45c7cd]"><i data-lucide="dumbbell" style="width:40px;height:40px"></i></div>
           <h3 class="text-3xl font-medium text-gray-900 mb-3">Gimnasio Equipado</h3>
           <p class="text-gray-600 font-medium leading-relaxed">Mantén tu estilo de vida activo.</p>
         </div>
         <div class="text-center">
-          <div class="flex justify-center mb-6 text-[#45c7cd]"><i data-lucide="users" class="w-10 h-10"></i></div>
+          <div class="flex justify-center mb-6 text-[#45c7cd]"><i data-lucide="users" style="width:40px;height:40px"></i></div>
           <h3 class="text-3xl font-medium text-gray-900 mb-3">Club Social</h3>
           <p class="text-gray-600 font-medium leading-relaxed">Un lugar para compartir y conectar.</p>
         </div>
         <div class="text-center">
-          <div class="flex justify-center mb-6 text-[#45c7cd]"><i data-lucide="leaf" class="w-10 h-10"></i></div>
+          <div class="flex justify-center mb-6 text-[#45c7cd]"><i data-lucide="leaf" style="width:40px;height:40px"></i></div>
           <h3 class="text-3xl font-medium text-gray-900 mb-3">Jardines Tropicales</h3>
           <p class="text-gray-600 font-medium leading-relaxed">Rodeado de naturaleza y tranquilidad.</p>
         </div>
         <div class="text-center">
-          <div class="flex justify-center mb-6 text-[#45c7cd]"><i data-lucide="shield-check" class="w-10 h-10"></i></div>
+          <div class="flex justify-center mb-6 text-[#45c7cd]"><i data-lucide="shield-check" style="width:40px;height:40px"></i></div>
           <h3 class="text-3xl font-medium text-gray-900 mb-3">Seguridad 24/7</h3>
           <p class="text-gray-600 font-medium leading-relaxed">Protección para ti y tu familia.</p>
         </div>
         <div class="text-center">
-          <div class="flex justify-center mb-6 text-[#45c7cd]"><i data-lucide="sparkles" class="w-10 h-10"></i></div>
+          <div class="flex justify-center mb-6 text-[#45c7cd]"><i data-lucide="sparkles" style="width:40px;height:40px"></i></div>
           <h3 class="text-3xl font-medium text-gray-900 mb-3">Salón de Eventos</h3>
           <p class="text-gray-600 font-medium leading-relaxed">Celebra momentos especiales con estilo.</p>
         </div>
@@ -360,18 +378,24 @@
   </section>
 
   <!-- GALLERY -->
-  <section class="min-h-screen bg-[#fafafa] py-16 md:py-20 lg:py-30">
-    <div class="mx-auto px-6 sm:px-10 md:px-16 lg:px-24">
-      <div style="display:grid;grid-template-rows:1fr 1fr;gap:1rem;height:calc(100vh - 4rem)">
-        <div class="rel rounded-2xl shadow-lg">
-          <img class="cover" src="https://lromanarealestate.com/costamar/costamarcollage1.avif" alt="Vista aérea Costa Mar" />
+  <section class="min-h-screen bg-[#fafafa] py-16 md:py-20">
+    <div class="px-4 md:px-6">
+      <div class="grid grid-rows-2 gap-4 h-[calc(100vh-4rem)]">
+        <div class="relative rounded-2xl shadow-lg overflow-hidden">
+          <img src="https://lromanarealestate.com/costamar/costamarcollage1.avif"
+               alt="Vista aérea del complejo residencial Costa Mar"
+               style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" />
         </div>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem">
-          <div class="rel shadow-lg rounded-2xl">
-            <img class="cover" src="https://lromanarealestate.com/costamar/costamarcollage2.avif" alt="Edificios Costa Mar" />
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="relative shadow-lg rounded-2xl overflow-hidden">
+            <img src="https://lromanarealestate.com/costamar/costamarcollage2.avif"
+                 alt="Edificios modernos del complejo Costa Mar"
+                 style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" />
           </div>
-          <div class="rel shadow-lg rounded-2xl">
-            <img class="cover" src="https://lromanarealestate.com/costamar/costamarcollage3.avif" alt="Interior Costa Mar" />
+          <div class="relative shadow-lg rounded-2xl overflow-hidden">
+            <img src="https://lromanarealestate.com/costamar/costamarcollage3.avif"
+                 alt="Interior de lujo de apartamento Costa Mar"
+                 style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" />
           </div>
         </div>
       </div>
@@ -379,158 +403,173 @@
   </section>
 
   <!-- SERVICIOS -->
-  <section class="py-16 px-4 bg-gray-50">
-    <div class="max-w-7xl mx-auto">
-      <div class="text-center mb-16">
-        <div class="inline-block bg-[#d2eff2] px-4 py-2 rounded-full text-sm font-medium mb-6">Servicios</div>
-        <h2 class="text-4xl md:text-5xl font-medium text-gray-900 mb-6">
-          Conecta con los Mejores Destinos<br />Cercanos
-        </h2>
-        <p class="text-lg font-semibold text-gray-600 max-w-3xl mx-auto">
-          Descubre la conveniencia de vivir en Residencial Costa Mar, con acceso rápido a las
-          principales atracciones y servicios de La Romana.
-        </p>
+  <section class="py-16 bg-gray-50 overflow-hidden">
+    <div class="text-center mb-16 px-6 sm:px-10 md:px-16 lg:px-24">
+      <div class="inline-block bg-[#d2eff2] px-4 py-2 rounded-full text-sm font-medium mb-6">Servicios</div>
+      <h2 class="text-4xl md:text-5xl font-medium text-gray-900 mb-6">
+        Conecta con los Mejores Destinos<br />Cercanos
+      </h2>
+      <p class="text-lg font-semibold text-gray-600 max-w-3xl mx-auto">
+        Descubre la conveniencia de vivir en Residencial Costa Mar, con acceso rápido a las
+        principales atracciones y servicios de La Romana.
+      </p>
+    </div>
+    <div>
+
+      <div class="flex flex-col lg:flex-row items-stretch min-h-[400px] mb-8 lg:mb-0">
+        <div class="w-full lg:w-1/2 flex flex-col justify-center text-center lg:text-left py-12 lg:py-16 px-6 sm:px-10 md:px-16 lg:px-20">
+          <div class="flex items-center justify-center lg:justify-start gap-4 mb-6">
+            <div class="w-12 h-12 bg-[#a9e6e8] rounded-xl flex items-center justify-center font-medium text-lg">01</div>
+          </div>
+          <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Aeropuerto Internacional de La Romana</h3>
+          <p class="text-lg text-gray-600">15 minutos de distancia</p>
+        </div>
+        <div class="relative w-full lg:w-1/2 min-h-[320px] md:min-h-[420px] rounded-2xl lg:rounded-none overflow-hidden mx-4 lg:mx-0 shadow-lg lg:shadow-none">
+          <img src="https://lromanarealestate.com/costamar/costamarservicio1.avif"
+               alt="Aeropuerto Internacional de La Romana"
+               style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" />
+        </div>
       </div>
-      <div class="space-y-16">
 
-        <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
-          <div class="flex-1 text-center lg:text-left">
-            <div class="flex items-center justify-center lg:justify-start gap-4 mb-6">
-              <div class="w-12 h-12 bg-[#a9e6e8] rounded-xl flex items-center justify-center font-medium text-lg">01</div>
-            </div>
-            <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Aeropuerto Internacional de La Romana</h3>
-            <p class="text-lg text-gray-600">15 minutos de distancia</p>
+      <div class="flex flex-col lg:flex-row-reverse items-stretch min-h-[400px] mb-8 lg:mb-0">
+        <div class="w-full lg:w-1/2 flex flex-col justify-center text-center lg:text-left py-12 lg:py-16 px-6 sm:px-10 md:px-16 lg:px-20">
+          <div class="flex items-center justify-center lg:justify-start gap-4 mb-6">
+            <div class="w-12 h-12 bg-[#a9e6e8] rounded-xl flex items-center justify-center font-medium text-lg">02</div>
           </div>
-          <div class="flex-1 rel rounded-2xl shadow-lg" style="height:20rem">
-            <img class="cover" src="https://lromanarealestate.com/costamar/costamarservicio1.avif" alt="Aeropuerto Internacional de La Romana" />
-          </div>
+          <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Isla Catalina</h3>
+          <p class="text-lg text-gray-600">20 minutos de distancia</p>
         </div>
-
-        <div class="flex flex-col lg:flex-row-reverse items-center gap-8 lg:gap-16">
-          <div class="flex-1 text-center lg:text-left">
-            <div class="flex items-center justify-center lg:justify-start gap-4 mb-6">
-              <div class="w-12 h-12 bg-[#a9e6e8] rounded-xl flex items-center justify-center font-medium text-lg">02</div>
-            </div>
-            <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Isla Catalina</h3>
-            <p class="text-lg text-gray-600">20 minutos de distancia</p>
-          </div>
-          <div class="flex-1 rel rounded-2xl shadow-lg" style="height:20rem">
-            <img class="cover" src="https://lromanarealestate.com/costamar/costamarservicio2.avif" alt="Isla Catalina" />
-          </div>
+        <div class="relative w-full lg:w-1/2 min-h-[320px] md:min-h-[420px] rounded-2xl lg:rounded-none overflow-hidden mx-4 lg:mx-0 shadow-lg lg:shadow-none">
+          <img src="https://lromanarealestate.com/costamar/costamarservicio2.avif"
+               alt="Isla Catalina"
+               style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" />
         </div>
-
-        <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
-          <div class="flex-1 text-center lg:text-left">
-            <div class="flex items-center justify-center lg:justify-start gap-4 mb-6">
-              <div class="w-12 h-12 bg-[#a9e6e8] rounded-xl flex items-center justify-center font-medium text-lg">03</div>
-            </div>
-            <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Altos de Chavón</h3>
-            <p class="text-lg text-gray-600">25 minutos de distancia</p>
-          </div>
-          <div class="flex-1 rel rounded-2xl shadow-lg" style="height:20rem">
-            <img class="cover" src="https://lromanarealestate.com/costamar/costamarservicio3.avif" alt="Altos de Chavón" />
-          </div>
-        </div>
-
-        <div class="flex flex-col lg:flex-row-reverse items-center gap-8 lg:gap-16">
-          <div class="flex-1 text-center lg:text-left">
-            <div class="flex items-center justify-center lg:justify-start gap-4 mb-6">
-              <div class="w-12 h-12 bg-[#a9e6e8] rounded-xl flex items-center justify-center font-medium text-lg">04</div>
-            </div>
-            <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Playas de Bayahíbe</h3>
-            <p class="text-lg text-gray-600">30 minutos de distancia</p>
-          </div>
-          <div class="flex-1 rel rounded-2xl shadow-lg" style="height:20rem">
-            <img class="cover" src="https://lromanarealestate.com/costamar/costamarservicio4.avif" alt="Playas de Bayahíbe" />
-          </div>
-        </div>
-
-        <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
-          <div class="flex-1 text-center lg:text-left">
-            <div class="flex items-center justify-center lg:justify-start gap-4 mb-6">
-              <div class="w-12 h-12 bg-[#a9e6e8] rounded-xl flex items-center justify-center font-medium text-lg">05</div>
-            </div>
-            <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Centro Comercial Multiplaza</h3>
-            <p class="text-lg text-gray-600">10 minutos de distancia</p>
-          </div>
-          <div class="flex-1 rel rounded-2xl shadow-lg" style="height:20rem">
-            <img class="cover" src="https://lromanarealestate.com/costamar/costamarservicio5.avif" alt="Centro Comercial Multiplaza" />
-          </div>
-        </div>
-
-        <div class="flex flex-col lg:flex-row-reverse items-center gap-8 lg:gap-16">
-          <div class="flex-1 text-center lg:text-left">
-            <div class="flex items-center justify-center lg:justify-start gap-4 mb-6">
-              <div class="w-12 h-12 bg-[#a9e6e8] rounded-xl flex items-center justify-center font-medium text-lg">06</div>
-            </div>
-            <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Campo de Golf La Estancia</h3>
-            <p class="text-lg text-gray-600">15 minutos de distancia</p>
-          </div>
-          <div class="flex-1 rel rounded-2xl shadow-lg" style="height:20rem">
-            <img class="cover" src="https://lromanarealestate.com/costamar/costamarservicio6.avif" alt="Campo de Golf La Estancia" />
-          </div>
-        </div>
-
       </div>
+
+      <div class="flex flex-col lg:flex-row items-stretch min-h-[400px] mb-8 lg:mb-0">
+        <div class="w-full lg:w-1/2 flex flex-col justify-center text-center lg:text-left py-12 lg:py-16 px-6 sm:px-10 md:px-16 lg:px-20">
+          <div class="flex items-center justify-center lg:justify-start gap-4 mb-6">
+            <div class="w-12 h-12 bg-[#a9e6e8] rounded-xl flex items-center justify-center font-medium text-lg">03</div>
+          </div>
+          <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Altos de Chavón</h3>
+          <p class="text-lg text-gray-600">25 minutos de distancia</p>
+        </div>
+        <div class="relative w-full lg:w-1/2 min-h-[320px] md:min-h-[420px] rounded-2xl lg:rounded-none overflow-hidden mx-4 lg:mx-0 shadow-lg lg:shadow-none">
+          <img src="https://lromanarealestate.com/costamar/costamarservicio3.avif"
+               alt="Altos de Chavón"
+               style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" />
+        </div>
+      </div>
+
+      <div class="flex flex-col lg:flex-row-reverse items-stretch min-h-[400px] mb-8 lg:mb-0">
+        <div class="w-full lg:w-1/2 flex flex-col justify-center text-center lg:text-left py-12 lg:py-16 px-6 sm:px-10 md:px-16 lg:px-20">
+          <div class="flex items-center justify-center lg:justify-start gap-4 mb-6">
+            <div class="w-12 h-12 bg-[#a9e6e8] rounded-xl flex items-center justify-center font-medium text-lg">04</div>
+          </div>
+          <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Playas de Bayahíbe</h3>
+          <p class="text-lg text-gray-600">30 minutos de distancia</p>
+        </div>
+        <div class="relative w-full lg:w-1/2 min-h-[320px] md:min-h-[420px] rounded-2xl lg:rounded-none overflow-hidden mx-4 lg:mx-0 shadow-lg lg:shadow-none">
+          <img src="https://lromanarealestate.com/costamar/costamarservicio4.avif"
+               alt="Playas de Bayahíbe"
+               style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" />
+        </div>
+      </div>
+
+      <div class="flex flex-col lg:flex-row items-stretch min-h-[400px] mb-8 lg:mb-0">
+        <div class="w-full lg:w-1/2 flex flex-col justify-center text-center lg:text-left py-12 lg:py-16 px-6 sm:px-10 md:px-16 lg:px-20">
+          <div class="flex items-center justify-center lg:justify-start gap-4 mb-6">
+            <div class="w-12 h-12 bg-[#a9e6e8] rounded-xl flex items-center justify-center font-medium text-lg">05</div>
+          </div>
+          <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Centro Comercial Multiplaza</h3>
+          <p class="text-lg text-gray-600">10 minutos de distancia</p>
+        </div>
+        <div class="relative w-full lg:w-1/2 min-h-[320px] md:min-h-[420px] rounded-2xl lg:rounded-none overflow-hidden mx-4 lg:mx-0 shadow-lg lg:shadow-none">
+          <img src="https://lromanarealestate.com/costamar/costamarservicio5.avif"
+               alt="Centro Comercial Multiplaza"
+               style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" />
+        </div>
+      </div>
+
+      <div class="flex flex-col lg:flex-row-reverse items-stretch min-h-[400px] mb-8 lg:mb-0">
+        <div class="w-full lg:w-1/2 flex flex-col justify-center text-center lg:text-left py-12 lg:py-16 px-6 sm:px-10 md:px-16 lg:px-20">
+          <div class="flex items-center justify-center lg:justify-start gap-4 mb-6">
+            <div class="w-12 h-12 bg-[#a9e6e8] rounded-xl flex items-center justify-center font-medium text-lg">06</div>
+          </div>
+          <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Campo de Golf La Estancia</h3>
+          <p class="text-lg text-gray-600">15 minutos de distancia</p>
+        </div>
+        <div class="relative w-full lg:w-1/2 min-h-[320px] md:min-h-[420px] rounded-2xl lg:rounded-none overflow-hidden mx-4 lg:mx-0 shadow-lg lg:shadow-none">
+          <img src="https://lromanarealestate.com/costamar/costamarservicio6.avif"
+               alt="Campo de Golf La Estancia"
+               style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" />
+        </div>
+      </div>
+
     </div>
   </section>
 
   <!-- CONTACTO -->
-  <section id="contact" class="bg-white py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8">
-    <div class="max-w-7xl mx-auto">
-      <h2 class="text-3xl md:text-4xl font-semibold text-gray-900 mb-8 sm:mb-10 lg:mb-12 leading-tight">
+  <section id="contact" class="bg-white overflow-hidden">
+    <div class="px-6 sm:px-10 md:px-16 lg:px-24 pt-12 sm:pt-16 md:pt-20 pb-8 sm:pb-10">
+      <h2 class="text-3xl md:text-4xl font-semibold text-gray-900 leading-tight">
         Agenda Tu Cita para Conocer Residencial Costa Mar
       </h2>
-      <div class="flex flex-col lg:flex-row items-stretch gap-8 lg:gap-10" style="min-height:600px">
-        <div class="w-full lg:w-1/2 flex flex-col justify-center">
-          <div class="max-w-2xl">
-            <p class="text-gray-600 mb-6 sm:mb-8 leading-relaxed">
-              Queremos resolver todas tus dudas y ayudarte a encontrar la propiedad perfecta en
-              Residencial Costa Mar. Agenda una cita con nuestro equipo y descubre todo lo que este
-              exclusivo proyecto tiene para ofrecer.
-            </p>
-            <div class="mb-6 sm:mb-8 grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm sm:text-base">
-              <div class="flex flex-col sm:flex-row sm:items-center">
-                <span class="font-semibold text-gray-900 mr-1">Teléfono:</span>
-                <span class="text-gray-600">+1 (484) 473-1113</span>
-              </div>
-              <div class="flex flex-col sm:flex-row sm:items-center">
-                <span class="font-semibold text-gray-900 mr-1">Correo Electrónico:</span>
-                <span class="text-gray-600">info@lromanarealestate.com</span>
-              </div>
-              <div class="sm:col-span-2">
-                <span class="font-semibold text-gray-900">Dirección:</span>
-                <span class="text-gray-600 ml-1">Reparto Torres Calle 4ta #5, La Romana, República Dominicana.</span>
-              </div>
-            </div>
-            <form onsubmit="return false" class="bg-gray-50 p-5 sm:p-6 md:p-8 rounded-xl shadow-sm">
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
-                <div>
-                  <label class="block text-sm font-medium text-gray-700 mb-1">Nombre y Apellido</label>
-                  <input name="name" type="text" placeholder="Mitchell" class="w-full px-4 py-3 bg-white border border-gray-300 rounded-xl focus:ring-2 focus:ring-teal-500 focus:border-transparent outline-none transition-all text-sm sm:text-base" />
-                </div>
-                <div>
-                  <label class="block text-sm font-medium text-gray-700 mb-1">Teléfono</label>
-                  <input name="phone" type="tel" placeholder="+123 456 789 00" class="w-full px-4 py-3 bg-white border border-gray-300 rounded-xl focus:ring-2 focus:ring-teal-500 focus:border-transparent outline-none transition-all text-sm sm:text-base" />
-                </div>
-              </div>
-              <div class="mb-4">
-                <label class="block text-sm font-medium text-gray-700 mb-1">Correo Electrónico</label>
-                <input name="email" type="email" placeholder="test@gmail.com" class="w-full px-4 py-3 bg-white border border-gray-300 rounded-xl focus:ring-2 focus:ring-teal-500 focus:border-transparent outline-none transition-all text-sm sm:text-base" />
-              </div>
-              <div class="mb-4">
-                <label class="block text-sm font-medium text-gray-700 mb-1">Mensaje</label>
-                <textarea name="message" placeholder="Explain it in details..." rows="5" class="w-full px-4 py-3 bg-white border border-gray-300 rounded-xl focus:ring-2 focus:ring-teal-500 focus:border-transparent outline-none transition-all text-sm sm:text-base resize-none"></textarea>
-              </div>
-              <button type="submit" class="w-full bg-[#45c7cd] text-white font-semibold py-3 sm:py-4 px-6 rounded-full transition-colors duration-200 hover:bg-teal-600">
-                Enviar mi mensaje
-              </button>
-            </form>
+    </div>
+    <div class="flex flex-col lg:flex-row items-stretch min-h-[500px] lg:min-h-[640px]">
+      <div class="w-full lg:w-1/2 flex flex-col justify-center px-6 sm:px-10 md:px-16 lg:px-24 pb-12 lg:pb-20">
+        <p class="text-gray-600 mb-6 sm:mb-8 leading-relaxed">
+          Queremos resolver todas tus dudas y ayudarte a encontrar la propiedad perfecta en
+          Residencial Costa Mar. Agenda una cita con nuestro equipo y descubre todo lo que este
+          exclusivo proyecto tiene para ofrecer.
+        </p>
+        <div class="mb-6 sm:mb-8 grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm sm:text-base">
+          <div class="flex flex-col sm:flex-row sm:items-center">
+            <span class="font-semibold text-gray-900 mr-1">Teléfono:</span>
+            <span class="text-gray-600">+1 (484) 473-1113</span>
+          </div>
+          <div class="flex flex-col sm:flex-row sm:items-center">
+            <span class="font-semibold text-gray-900 mr-1">Correo Electrónico:</span>
+            <span class="text-gray-600">info@lromanarealestate.com</span>
+          </div>
+          <div class="sm:col-span-2">
+            <span class="font-semibold text-gray-900">Dirección:</span>
+            <span class="text-gray-600 ml-1">Reparto Torres Calle 4ta #5, La Romana, República Dominicana.</span>
           </div>
         </div>
-        <div class="w-full lg:w-1/2 rel rounded-xl shadow-lg" style="min-height:500px">
-          <img class="cover rounded-xl" src="https://lromanarealestate.com/costamar/formulariocostamar.avif" alt="Residencial Costa Mar" />
-        </div>
+        <form onsubmit="return false" class="bg-gray-50 p-5 sm:p-6 md:p-8 rounded-xl shadow-sm">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-1">Nombre y Apellido</label>
+              <input name="name" type="text" placeholder="Mitchell"
+                     class="w-full px-4 py-3 bg-white border border-gray-300 rounded-xl focus:ring-2 focus:ring-teal-500 focus:border-transparent outline-none transition-all text-sm sm:text-base" />
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-1">Teléfono</label>
+              <input name="phone" type="tel" placeholder="+123 456 789 00"
+                     class="w-full px-4 py-3 bg-white border border-gray-300 rounded-xl focus:ring-2 focus:ring-teal-500 focus:border-transparent outline-none transition-all text-sm sm:text-base" />
+            </div>
+          </div>
+          <div class="mb-4">
+            <label class="block text-sm font-medium text-gray-700 mb-1">Correo Electrónico</label>
+            <input name="email" type="email" placeholder="test@gmail.com"
+                   class="w-full px-4 py-3 bg-white border border-gray-300 rounded-xl focus:ring-2 focus:ring-teal-500 focus:border-transparent outline-none transition-all text-sm sm:text-base" />
+          </div>
+          <div class="mb-4">
+            <label class="block text-sm font-medium text-gray-700 mb-1">Mensaje</label>
+            <textarea name="message" placeholder="Explain it in details..." rows="5"
+                      class="w-full px-4 py-3 bg-white border border-gray-300 rounded-xl focus:ring-2 focus:ring-teal-500 focus:border-transparent outline-none transition-all text-sm sm:text-base resize-none"></textarea>
+          </div>
+          <button type="submit"
+                  class="w-full bg-[#45c7cd] text-white font-semibold py-3 sm:py-4 px-6 rounded-full transition-colors duration-200 hover:bg-teal-600">
+            Enviar mi mensaje
+          </button>
+        </form>
+      </div>
+      <div class="relative w-full lg:w-1/2 min-h-[380px] lg:min-h-full">
+        <img src="https://lromanarealestate.com/costamar/formulariocostamar.avif"
+             alt="Residencial Costa Mar - Modern apartment buildings with tropical landscaping"
+             style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center" />
       </div>
     </div>
   </section>
@@ -577,29 +616,26 @@
 </footer>
 
 <script>
-  // Inicializar íconos Lucide
   lucide.createIcons();
 
-  // Menú móvil
   document.getElementById('menu-btn').addEventListener('click', function () {
     var m = document.getElementById('mobile-menu');
     m.style.display = m.style.display === 'none' ? 'flex' : 'none';
   });
 
-  // Contadores animados
   function animateCounter(id, target, duration) {
     var el = document.getElementById(id);
     var start = null;
     function step(ts) {
       if (!start) start = ts;
       var p = Math.min((ts - start) / duration, 1);
-      el.textContent = Math.floor(p * target).toLocaleString('es-DO');
+      el.textContent = Math.floor(p * target).toLocaleString();
       if (p < 1) requestAnimationFrame(step);
     }
     requestAnimationFrame(step);
   }
   var fired = false;
-  new IntersectionObserver(function(entries) {
+  new IntersectionObserver(function (entries) {
     if (entries[0].isIntersecting && !fired) {
       fired = true;
       animateCounter('cnt-apts', 60, 1800);
