@@ -411,7 +411,7 @@ function Properties() {
             Diseñadas para Cada Estilo de Vida
           </h2>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-8">
           {properties.map((p, i) => (
             <PropertyCard key={p.name} {...p} className={i === properties.length - 1 ? "lg:col-start-2" : ""} />
           ))}
